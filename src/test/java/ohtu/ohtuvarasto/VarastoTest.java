@@ -117,6 +117,7 @@ public class VarastoTest {
     public void tilavuusAlleNolla() {
         Varasto v = new Varasto(-1, 0);
         assertEquals(v.toString(), v.toString());
+        //done
     }
 
 
