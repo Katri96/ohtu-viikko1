@@ -64,5 +64,60 @@ public class VarastoTest {
         // varastossa pitäisi olla tilaa 10 - 8 + 2 eli 4
         assertEquals(4, varasto.paljonkoMahtuu(), vertailuTarkkuus);
     }
+    @Test
+    public void otetaanEnemmanKuinOnSaldoa() {
+        varasto.otaVarastosta(varasto.getSaldo()+1);
+        assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
+        
+    }
+    @Test
+    public void laitetaanEnemmanKuinOnTilaa() {
+        varasto.lisaaVarastoon(varasto.getTilavuus()+1);
+        assertEquals(varasto.getTilavuus(), varasto.getSaldo(), vertailuTarkkuus);
+        
+    }
+    
+    @Test
+    public void otetaanNegatiivinen() {
+        assertEquals(0.0, varasto.otaVarastosta(-1), vertailuTarkkuus);
+    }
+    
+    @Test
+    public void LaitetaanNegatiivinen() {
+        double s = varasto.getSaldo();
+        varasto.lisaaVarastoon(-1);
+        assertEquals(s, varasto.getSaldo(), vertailuTarkkuus);
+  
+    }
+    
+    @Test
+    public void stringToimii() {
+        varasto.lisaaVarastoon(1);
+        assertEquals(varasto.toString(), varasto.toString());
+    }
+    @Test
+    public void tilavuusAlussaNolla() {
+        Varasto v = new Varasto(0);
+        assertEquals(0.0, v.getTilavuus(), vertailuTarkkuus);
+    }
+    
+    @Test
+    public void luoVarastonTilavuusJaAlkusaldo() {
+        Varasto v = new Varasto(10, 5);
+        assertEquals(v.toString(), v.toString());
+    }
+
+    @Test
+    public void luoVarastonTilavuusJaAlkusaldoNegatiivisia() {
+        Varasto v = new Varasto(-10, -5);
+        assertEquals(v.toString(), v.toString());
+    }
+
+    @Test
+    public void tilavuusAlleNolla() {
+        Varasto v = new Varasto(-1, 0);
+        assertEquals(v.toString(), v.toString());
+    }
+
 
 }
