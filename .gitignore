@@ -1,3 +1,7 @@
 *.tmp
 /build
 /.nb-gradle/
+/koodi/viikko1/RiippuvuuksienInjektointi1/.nb-gradle/
+/RiippuvuuksienInjektointi1/.nb-gradle/
+/NhlStatistics1/.nb-gradle/
+/NhlStatistics1/build/
