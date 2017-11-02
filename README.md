@@ -2,4 +2,9 @@
 
 [![Build Status](https://travis-ci.org/Katri96/ohtu-viikko1.svg?branch=master)](https://travis-ci.org/Katri96/ohtu-viikko1)
 
-423d55ae-bbbb-447a-94d1-2f608daded7d
+
+
+
+[![codecov](https://codecov.io/gh/Katri96/ohtu-viikko1/branch/master/graph/badge.svg)](https://codecov.io/gh/Katri96/ohtu-viikko1)
+
+
